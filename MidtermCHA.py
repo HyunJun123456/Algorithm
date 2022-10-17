@@ -114,80 +114,304 @@ print(nums[::-1])
 interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
 print(" ".join(interest))
 
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+# 070 리스트 정렬(20)
+# 리스트에 있는 값을 오름차순으로 정렬하세요.
+data = [2, 4, 3, 1, 5, 10, 9]
+dataSort = sorted(data)
+print(dataSort)
+
+# 071(21)
+# my_variable 이름의 비어있는 튜플을 만들라.
+my_variable = ()
+print(my_variable)
+
+# 072(22)
+# 2016년 11월 영화 예매 순위 기준 top3는 다음과 같다. 영화 제목을 movie_rank 이름의 튜플에 저장하라. (순위 정보는 저장하지 않는다.)
+movie_rank = ("닥터 스트레인지", "스플릿", "럭키")
+print(movie_rank)
+
+# 073(23)
+# 숫자 1 이 저장된 튜플을 생성하라.
+my_tuple = (1, )
+print(my_tuple)
+
+# 074(24)
+# 다음 코드를 실행해보고 오류가 발생하는 원인을 설명하라.
+"""
+>> t = (1, 2, 3)
+>> t[0] = 'a'
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    t[0] = 'a'
+TypeError: 'tuple' object does not support item assignment
+"""
+# 튜플은 원소를 변경할 수 없기 때문에
+
+# 075(25)
+# 아래와 같이 t에는 1, 2, 3, 4 데이터가 바인딩되어 있다. t가 바인딩하는 데이터 타입은 무엇인가?
+t = 1, 2, 3, 4
+print(type(t))
+
+# 076(26)
+# 변수 t에는 아래와 같은 값이 저장되어 있다. 변수 t가 ('A', 'b', 'c') 튜플을 가리키도록 수정 하라.
+t = ('a', 'b', 'c')
+t = ("A", "b", "c")
+print(t)
+
+# 077(27)
+# 다음 튜플을 리스트로 변환하라.
+interest = ('삼성전자', 'LG전자', 'SK Hynix')
+data = list(interest)
+print(data)
+
+# 078(28)
+# 다음 리스트를 튜플로 변경하라.
+interest = ['삼성전자', 'LG전자', 'SK Hynix']
+data = tuple(interest)
+print(data)
+
+# 079 튜플 언팩킹(29)
+# 다음 코드의 실행 결과를 예상하라.
+"""
+    temp = ('apple', 'banana', 'cake')
+    a, b, c = temp
+    print(a, b, c)
+"""
+# 각각의 a, b, c에 값이 저장되어 apple banana cake가 나온다
+
+# 080 range 함수(30)
+# 1 부터 99까지의 정수 중 짝수만 저장된 튜플을 생성하라.
+data = tuple(range(2,100,2))
+print(data)
+
+# 082(31)
+# 다음과 같이 10개의 값이 저장된 scores 리스트가 있을 때, start expression을 사용하여 우측 8개의 값을 valid_score 변수에 바인딩하여라.
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+a, b, *valid_score = scores
+print(valid_score)
+
+# 083(32)
+# 다음과 같이 10개의 값이 저장된 scores 리스트가 있을 때, start expression을 사용하여 가운데 있는 8개의 값을 valid_score 변수에 바인딩하여라.
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+a, *valid_score, b = scores
+print(valid_score)
+
+# 087(33)
+# 다음 딕셔너리를 사용하여 메로나 가격을 출력하라.
+ice = {'메로나': 1000,
+       '폴로포': 1200,
+       '빵빠레': 1800,
+       '죠스바': 1200,
+       '월드콘': 1500}
+print("메로나 가격:",ice["메로나"])
+
+# 088(34)
+# 다음 딕셔너리에서 메로나의 가격을 1300으로 수정하라.
+ice = {'메로나': 1000,
+       '폴로포': 1200,
+       '빵빠레': 1800,
+       '죠스바': 1200,
+       '월드콘': 1500}
+ice['메로나'] = 1300
+print(ice)
+
+# 090(35)
+# 다음 코드에서 에러가 발생한 원인을 설명하라.
+"""
+>> icecream = {'폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+>> icecream['누가바']
+Traceback (most recent call last):
+  File "<pyshell#69>", line 1, in <module>
+    icecream['누가바']
+KeyError: '누가바'
+"""
+# icecream에서 없는 값을 찾기 때문에 생기는 오류
+
+# 092 딕셔너리 인덱싱(36)
+# inventory 딕셔너리에서 메로나의 가격을 화면에 출력하라.
+inventory = {"메로나": [300, 20],
+              "비비빅": [400, 3],
+              "죠스바": [250, 100]}
+print(inventory['메로나'][0], '원')
+
+# 095 딕셔너리 keys() 메서드(37)
+# 다음의 딕셔너리로부터 key 값으로만 구성된 리스트를 생성하라.
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+key = list(icecream.keys())
+print(key)
+
+# 096 딕셔너리 values() 메서드(38)
+# 다음의 딕셔너리에서 values 값으로만 구성된 리스트를 생성하라.
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+dic = list(icecream.values())
+print(dic)
+
+# 098 딕셔너리 update 메서드(39)
+# 아래의 new_product 딕셔너리를 다음 icecream 딕셔너리에 추가하라.
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+new_product = {'팥빙수':2700, '아맛나':1000}
+icecream.update(new_product)
+print(icecream)
+
+# 099 zip과 dict(40)
+# 아래 두 개의 튜플을 하나의 딕셔너리로 변환하라. keys를 키로, vals를 값으로 result 이름의 딕셔너리로 저장한다.
+keys = ("apple", "pear", "peach")
+vals = (300, 250, 400)
+result = dict(zip(keys, vals))
+print(result)
+
+# 102(41)
+# 아래 코드의 출력 결과를 예상하라
+print(3 == 5)
+# False
+
+# 104(42)
+# 아래 코드의 결과를 예상하라.
+x = 4
+print(1 < x < 5)
+# True
+
+# 108(43)
+# 아래 코드의 출력 결과를 예상하라
+if 4 < 3:
+    print("Hello World.")
+else:
+    print("Hi, there.")
+# Hi, there.
+
+# 112(44)
+# 사용자로부터 하나의 숫자를 입력받고, 입력 받은 숫자에 10을 더해 출력하라.
+"""    
+number = input("숫자를 입력하세요: ")
+print(10+int(number))
+과제 진행을 위해 테스트 후 주석 처리 해두었습니다.
+"""
+
+# 116(45)
+# 사용자로부터 입력 받은 시간이 정각인지 판별하라.
+"""
+>> 현재시간:02:00
+정각 입니다.
+>> 현재시간:03:10
+정각이 아닙니다
+"""
+"""
+time = input("현재시간: ")
+if (time[-2:] == "00"):
+    print("정각 입니다.")
+else:
+    print("정각이 아닙니다.")
+"""
+
+# 118(46)
+# 투자 경고 종목 리스트가 있을 때 사용자로부터 종목명을 입력 받은 후 해당 종목이 
+# 투자 경고 종목이라면 '투자 경고 종목입니다'를 아니면 "투자 경고 종목이 아닙니다."를 출력하는 프로그램을 작성하라.
+warn_investment_list = ["Microsoft", "Google", "Naver", "Kakao", "SAMSUNG", "LG"]
+"""
+invest = input("종목명: ")
+if invest in warn_investment_list:
+    print("투자 경고 종목입니다.")
+else:
+    print("투자 경고 종목이 아닙니다.")
+"""
+
+# 121(47)
+# 사용자로부터 문자 한 개를 입력 받고, 소문자일 경우 대문자로, 대문자 일 경우, 소문자로 변경해서 출력하라.
+"""
+letter = input("")
+if letter.islower():
+    print(letter.upper())
+else:
+    print(letter.lower())
+"""
+
+# 124(48)
+# 사용자로부터 세 개의 숫자를 입력 받은 후 가장 큰 숫자를 출력하라.
+"""
+>> input number1: 10
+>> input number2: 9
+>> input number3: 20
+"""
+"""
+num1 = input("input number1: ")
+num2 = input("input number2: ")
+num3 = input("input number3: ")
+num1 = int(num1)
+num2 = int(num2)
+num3 = int(num3)
+if(num1 >= num2 and num1 >= num3):
+    print(num1)
+elif(num2 >= num1 and num2 >= num3):
+    print(num2)
+else:
+    print(num3)
+"""
+
+# 127(49)
+# 주민등록번호 뒷 자리 7자리 중 첫째 자리는 성별을 나타내는데, 1, 3은 남자 2, 4는 여자를 의미한다. 
+# 사용자로부터 13자리의 주민등록번호를 입력 받은 후 성별 (남자, 여자)를 출력하는 프로그램을 작성하라.
+"""
+rrNo = input("주민등록번호: ")
+rrNo = rrNo.split("-")[1]
+if rrNo[0] == "1" or rrNo[0] == "3":
+    print('남자')
+else:
+    print('여자')
+"""
+
+# 130(50)
+# 아래 코드는 비트코인의 가격 정보를 딕셔너리로 가져오는 코드이다.
+import requests
+
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+"""
+btc 딕셔너리 안에는 시가, 종가, 최고가, 최저가 등이 저장되어 있다. 
+최고가와 최저가의 차이를 변동폭으로 정의할 때 (시가 + 변동폭)이 최고가 보다 높을 경우 "상승장", 
+그렇지 않은 경우 "하락장" 문자열을 출력하라.
+"""
+move = float(btc['max_price']) - float(btc['min_price'])
+first = float(btc['opening_price'])
+high = float(btc['max_price'])
+
+if(first+move) > high:
+    print("상승장")
+else:
+    print("하락장")
+
+# 
+# 
+
+
+# 
+# 
+
+
+# 
+# 
+
+
+# 
+# 
+
+
+# 
+# 
+
+
+# 
+# 
+
+
+# 
+# 
+
+
+# 
+# 
+
+
+# 
+# 
+
+
+
