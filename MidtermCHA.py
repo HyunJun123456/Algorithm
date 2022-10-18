@@ -378,40 +378,93 @@ if(first+move) > high:
 else:
     print("하락장")
 
-# 
-# 
+# 139(51)
+# 다음 코드를 for문으로 작성하라.
+"""
+print("++++")
+print(10)
+print(20)
+print(30)
+"""
+print("+++")
+for x in [10,20,30]:
+    print(x)
+
+# 143(52)
+# 리스트에 주식 종목이름이 저장돼 있다.
+list = ["SK하이닉스", "삼성전자", "LG전자"]
+for x in list:
+    length = len(x)
+    print(length)
+
+# 151(53)
+# 리스트에는 네 개의 정수가 저장돼 있다.
+list = [3, -20, -3, 44]
+for x in list:
+    if x <0:
+        print(x)
+
+# 158(54)
+# 파일 이름이 저장된 리스트에서 확장자를 제거하고 파일 이름만 화면에 출력하라. (힌트: split() 메서드)
+list = ['hello.py', 'ex01.py', 'intro.hwp']
+list1 = list[0].split(".")
+print(list1[0])
+list2 = list[1].split(".")
+print(list2[0])
+list3 = list[2].split(".")
+print(list3[0])
 
 
-# 
-# 
+# 160(55)
+# 파일 이름이 저장된 리스트에서 확장자가 .h나 .c인 파일을 화면에 출력하라.
+list = ['intra.h', 'intra.c', 'define.h', 'run.py']
+for x in list:
+    split =x.split(".")
+    if(split[1] == "h" or split[1] == "c"):
+        print(x) 
 
+# 164(56)
+# 99부터 0까지 1씩 감소하는 숫자들을, 한 라인에 하나씩 출력하라.
+for i in range(100):
+    print(99-i)
 
-# 
-# 
+# 174(57)
+# 아래와 같이 리스트의 데이터를 출력하라. 단, for문과 range문을 사용하라.
+"""
+100 32150
+110 32000
+120 32500
+"""
+price_list = [32100, 32150, 32000, 32500]
+for i in range(1, 4):
+    print(90+10*i, price_list[i])
 
+# 186(58)
+# 리스트에 저장된 데이터를 아래와 같이 출력하라.
+apart = [ [101, 102], [201, 202], [301, 302] ]
+for y in apart[::-1]:
+    for x in y:
+        print(x, "호")
 
-# 
-# 
+# 191(59)
+# data에는 매수한 종목들의 OHLC (open/high/low/close) 가격 정보가 바인딩 되어있다.
+data = [
+    [ 2000,  3050,  2050,  1980],
+    [ 7500,  2050,  2050,  1980],
+    [15450, 15050, 15550, 14900]
+]
+# 수수료를 0.014 %로 가정할 때, 각 가격에 수수료를 포함한 가격을 한라인에 하나씩 출력하라.
+for x in data:
+    for y in x:
+        print(y * 1.00014)
 
-
-# 
-# 
-
-
-# 
-# 
-
-
-# 
-# 
-
-
-# 
-# 
-
-
-# 
-# 
-
-
+# 196(60)
+# ohlc 리스트에는 시가(open), 고가 (high), 저가 (low) , 종가(close)가 날짜별로 저장돼 있다. 종가가 150원보다 큰경우에만 종가를 출력하라.
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+for x in ohlc[1:]:
+    if (x[3] > 150):
+        print(x[3])
 
